@@ -1,0 +1,23 @@
+<h1>Listing miteshes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @miteshes.each do |mitesh| %>
+  <tr>
+    <td><%= mitesh.name %></td>
+    <td><%= link_to 'Show', mitesh %></td>
+    <td><%= link_to 'Edit', edit_mitesh_path(mitesh) %></td>
+    <td><%= link_to 'Destroy', mitesh, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mitesh', new_mitesh_path %>
